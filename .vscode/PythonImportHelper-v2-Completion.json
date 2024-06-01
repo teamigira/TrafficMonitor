@@ -1,34 +1,11 @@
 [
     {
-        "label": "Flask",
-        "importPath": "flask",
-        "description": "flask",
+        "label": "streamlit",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "render_template",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "request",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "flask",
-        "description": "flask",
-        "isExtraImport": true,
-        "detail": "flask",
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
         "documentation": {}
     },
     {
@@ -199,48 +176,21 @@
         "documentation": {}
     },
     {
-        "label": "index",
-        "kind": 2,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "def index():\n    return render_template('index.html')\n@app.route('/video')\ndef video():\n    return render_template('video.html')\n@app.route('/process', methods=['POST'])\ndef process():\n    return render_template('result.html')\n@app.route('/video_feed')\ndef video_feed():",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "video",
-        "kind": 2,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "def video():\n    return render_template('video.html')\n@app.route('/process', methods=['POST'])\ndef process():\n    return render_template('result.html')\n@app.route('/video_feed')\ndef video_feed():\n    return Response(video_stream.generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')\nif __name__ == '__main__':\n    app.run(debug=True)",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "process",
-        "kind": 2,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "def process():\n    return render_template('result.html')\n@app.route('/video_feed')\ndef video_feed():\n    return Response(video_stream.generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')\nif __name__ == '__main__':\n    app.run(debug=True)",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "video_feed",
-        "kind": 2,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "def video_feed():\n    return Response(video_stream.generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')\nif __name__ == '__main__':\n    app.run(debug=True)",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "app",
+        "label": "my_input",
         "kind": 5,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "app = Flask(__name__)\n# video_stream = VideoStream()\n@app.route('/')\ndef index():\n    return render_template('index.html')\n@app.route('/video')\ndef video():\n    return render_template('video.html')\n@app.route('/process', methods=['POST'])\ndef process():",
-        "detail": "app",
+        "importPath": "pages.Data",
+        "description": "pages.Data",
+        "peekOfCode": "my_input =  st.text_input(\"Input a a text\", st.session_state[\"my_input\"])\nsubmit = st.button(\"Submit\")\nif submit:\n    st.session_state[\"my_input\"] = my_input\n    st.write(\"You have entered\" ,my_input)",
+        "detail": "pages.Data",
+        "documentation": {}
+    },
+    {
+        "label": "submit",
+        "kind": 5,
+        "importPath": "pages.Data",
+        "description": "pages.Data",
+        "peekOfCode": "submit = st.button(\"Submit\")\nif submit:\n    st.session_state[\"my_input\"] = my_input\n    st.write(\"You have entered\" ,my_input)",
+        "detail": "pages.Data",
         "documentation": {}
     },
     {
