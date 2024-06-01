@@ -32,14 +32,6 @@
         "documentation": {}
     },
     {
-        "label": "VideoStream",
-        "importPath": "Test2",
-        "description": "Test2",
-        "isExtraImport": true,
-        "detail": "Test2",
-        "documentation": {}
-    },
-    {
         "label": "cv2",
         "kind": 6,
         "isExtraImport": true,
@@ -247,16 +239,7 @@
         "kind": 5,
         "importPath": "app",
         "description": "app",
-        "peekOfCode": "app = Flask(__name__)\nvideo_stream = VideoStream()\n@app.route('/')\ndef index():\n    return render_template('index.html')\n@app.route('/video')\ndef video():\n    return render_template('video.html')\n@app.route('/process', methods=['POST'])\ndef process():",
-        "detail": "app",
-        "documentation": {}
-    },
-    {
-        "label": "video_stream",
-        "kind": 5,
-        "importPath": "app",
-        "description": "app",
-        "peekOfCode": "video_stream = VideoStream()\n@app.route('/')\ndef index():\n    return render_template('index.html')\n@app.route('/video')\ndef video():\n    return render_template('video.html')\n@app.route('/process', methods=['POST'])\ndef process():\n    return render_template('result.html')",
+        "peekOfCode": "app = Flask(__name__)\n# video_stream = VideoStream()\n@app.route('/')\ndef index():\n    return render_template('index.html')\n@app.route('/video')\ndef video():\n    return render_template('video.html')\n@app.route('/process', methods=['POST'])\ndef process():",
         "detail": "app",
         "documentation": {}
     },

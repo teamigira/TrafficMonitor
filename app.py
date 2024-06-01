@@ -1,8 +1,8 @@
 from flask import Flask, render_template, request, Response
-from Test2 import VideoStream
+# from Test2 import VideoStream
 
 app = Flask(__name__)
-video_stream = VideoStream()
+# video_stream = VideoStream()
 
 
 @app.route('/')
