@@ -1,4 +1,5 @@
 import streamlit as st
+from Track import count_and_list_contents 
 
 st.title("Data")
 
@@ -14,3 +15,4 @@ submit = st.button("Submit")
 if submit:
     st.session_state["my_input"] = my_input
     st.write("You have entered" ,my_input)
+    count_and_list_contents('cctv_footages')

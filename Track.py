@@ -1,5 +1,4 @@
 from FourWaysCounter import process_video
-from backupfiles.get_video_file import get_latest_file_path
 from threading import Thread
 import os
 
@@ -14,6 +13,7 @@ def process_video_thread(file_path, output_file):
     process_video(file_path, output_file)
 
 def count_and_list_contents(path):
+    print("path is called")
     threads = []
     
     try:
