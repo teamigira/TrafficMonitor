@@ -1,0 +1,421 @@
+[
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "count_and_list_contents",
+        "importPath": "Track",
+        "description": "Track",
+        "isExtraImport": true,
+        "detail": "Track",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "YOLO",
+        "importPath": "ultralytics",
+        "description": "ultralytics",
+        "isExtraImport": true,
+        "detail": "ultralytics",
+        "documentation": {}
+    },
+    {
+        "label": "YOLO",
+        "importPath": "ultralytics",
+        "description": "ultralytics",
+        "isExtraImport": true,
+        "detail": "ultralytics",
+        "documentation": {}
+    },
+    {
+        "label": "YOLO",
+        "importPath": "ultralytics",
+        "description": "ultralytics",
+        "isExtraImport": true,
+        "detail": "ultralytics",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "importPath": "tracker",
+        "description": "tracker",
+        "isExtraImport": true,
+        "detail": "tracker",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "importPath": "tracker",
+        "description": "tracker",
+        "isExtraImport": true,
+        "detail": "tracker",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "tracker",
+        "description": "tracker",
+        "isExtraImport": true,
+        "detail": "tracker",
+        "documentation": {}
+    },
+    {
+        "label": "get_latest_file_path",
+        "importPath": "backupfiles.get_video_file",
+        "description": "backupfiles.get_video_file",
+        "isExtraImport": true,
+        "detail": "backupfiles.get_video_file",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "concurrent.futures",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "concurrent.futures",
+        "description": "concurrent.futures",
+        "detail": "concurrent.futures",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "dist",
+        "importPath": "math",
+        "description": "math",
+        "isExtraImport": true,
+        "detail": "math",
+        "documentation": {}
+    },
+    {
+        "label": "process_video",
+        "importPath": "FourWaysCounter",
+        "description": "FourWaysCounter",
+        "isExtraImport": true,
+        "detail": "FourWaysCounter",
+        "documentation": {}
+    },
+    {
+        "label": "Thread",
+        "importPath": "threading",
+        "description": "threading",
+        "isExtraImport": true,
+        "detail": "threading",
+        "documentation": {}
+    },
+    {
+        "label": "my_input",
+        "kind": 5,
+        "importPath": "pages.Data",
+        "description": "pages.Data",
+        "peekOfCode": "my_input =  st.text_input(\"Input a a text\", st.session_state[\"my_input\"])\nsubmit = st.button(\"Submit\")\nif submit:\n    st.session_state[\"my_input\"] = my_input\n    st.write(\"You have entered\" ,my_input)\n    count_and_list_contents('cctv_footages')",
+        "detail": "pages.Data",
+        "documentation": {}
+    },
+    {
+        "label": "submit",
+        "kind": 5,
+        "importPath": "pages.Data",
+        "description": "pages.Data",
+        "peekOfCode": "submit = st.button(\"Submit\")\nif submit:\n    st.session_state[\"my_input\"] = my_input\n    st.write(\"You have entered\" ,my_input)\n    count_and_list_contents('cctv_footages')",
+        "detail": "pages.Data",
+        "documentation": {}
+    },
+    {
+        "label": "RGB",
+        "kind": 2,
+        "importPath": "FourWaysCounter",
+        "description": "FourWaysCounter",
+        "peekOfCode": "def RGB(event, x, y, flags, param):\n    if event == cv2.EVENT_MOUSEMOVE:\n        colorsBGR = [x, y]\n        print(colorsBGR)\ncv2.namedWindow('RGB')\ncv2.setMouseCallback('RGB', RGB)\ndef process_video(latest_file_path,file_path):\n    print(latest_file_path + file_path)\n    cap = cv2.VideoCapture(latest_file_path)\n    my_file = open(\"coco.txt\", \"r\")",
+        "detail": "FourWaysCounter",
+        "documentation": {}
+    },
+    {
+        "label": "process_video",
+        "kind": 2,
+        "importPath": "FourWaysCounter",
+        "description": "FourWaysCounter",
+        "peekOfCode": "def process_video(latest_file_path,file_path):\n    print(latest_file_path + file_path)\n    cap = cv2.VideoCapture(latest_file_path)\n    my_file = open(\"coco.txt\", \"r\")\n    data = my_file.read()\n    class_list = data.split(\"\\n\")\n    count = 0\n    tracker = Tracker()\n    cy1 = 371\n    cy2 = 371  # Corrected value",
+        "detail": "FourWaysCounter",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "FourWaysCounter",
+        "description": "FourWaysCounter",
+        "peekOfCode": "model = YOLO('yolov8s.pt')\n# Initialize file to store timestamp and car count\ndef RGB(event, x, y, flags, param):\n    if event == cv2.EVENT_MOUSEMOVE:\n        colorsBGR = [x, y]\n        print(colorsBGR)\ncv2.namedWindow('RGB')\ncv2.setMouseCallback('RGB', RGB)\ndef process_video(latest_file_path,file_path):\n    print(latest_file_path + file_path)",
+        "detail": "FourWaysCounter",
+        "documentation": {}
+    },
+    {
+        "label": "process_video",
+        "kind": 2,
+        "importPath": "Multithreaded",
+        "description": "Multithreaded",
+        "peekOfCode": "def process_video(video_path, output_file):\n    try:\n        tracker = Tracker()\n        cy1, cy2, offset = 371, 371, 10\n        vh_down, vh_up, counter, counter1 = {}, {}, [], []\n        cap = cv2.VideoCapture(video_path)\n        if not cap.isOpened():\n            print(f\"Error: Unable to open video file {video_path}\")\n            return\n        frame_count, frame_skip = 0, 2  # Process every 5th frame to reduce load",
+        "detail": "Multithreaded",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "Multithreaded",
+        "description": "Multithreaded",
+        "peekOfCode": "model = YOLO('yolov8s.pt')\n# Initialize file to store timestamp and car count\noutput_dir = 'TrafficLogs'\nos.makedirs(output_dir, exist_ok=True)\ndef process_video(video_path, output_file):\n    try:\n        tracker = Tracker()\n        cy1, cy2, offset = 371, 371, 10\n        vh_down, vh_up, counter, counter1 = {}, {}, [], []\n        cap = cv2.VideoCapture(video_path)",
+        "detail": "Multithreaded",
+        "documentation": {}
+    },
+    {
+        "label": "output_dir",
+        "kind": 5,
+        "importPath": "Multithreaded",
+        "description": "Multithreaded",
+        "peekOfCode": "output_dir = 'TrafficLogs'\nos.makedirs(output_dir, exist_ok=True)\ndef process_video(video_path, output_file):\n    try:\n        tracker = Tracker()\n        cy1, cy2, offset = 371, 371, 10\n        vh_down, vh_up, counter, counter1 = {}, {}, [], []\n        cap = cv2.VideoCapture(video_path)\n        if not cap.isOpened():\n            print(f\"Error: Unable to open video file {video_path}\")",
+        "detail": "Multithreaded",
+        "documentation": {}
+    },
+    {
+        "label": "RGB",
+        "kind": 2,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "def RGB(event, x, y, flags, param):\n    if event == cv2.EVENT_MOUSEMOVE:\n        colorsBGR = [x, y]\n        print(colorsBGR)\ncv2.namedWindow('RGB')\ncv2.setMouseCallback('RGB', RGB)\ncap = cv2.VideoCapture('veh2.mp4')\nmy_file = open(\"coco.txt\", \"r\")\ndata = my_file.read()\nclass_list = data.split(\"\\n\")",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "model = YOLO('yolov8s.pt')\ndef RGB(event, x, y, flags, param):\n    if event == cv2.EVENT_MOUSEMOVE:\n        colorsBGR = [x, y]\n        print(colorsBGR)\ncv2.namedWindow('RGB')\ncv2.setMouseCallback('RGB', RGB)\ncap = cv2.VideoCapture('veh2.mp4')\nmy_file = open(\"coco.txt\", \"r\")\ndata = my_file.read()",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "cap",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "cap = cv2.VideoCapture('veh2.mp4')\nmy_file = open(\"coco.txt\", \"r\")\ndata = my_file.read()\nclass_list = data.split(\"\\n\")\n# print(class_list)\ncount = 0\ntracker = Tracker()\ncy1 = 322\ncy2 = 368\noffset = 6",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "my_file",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "my_file = open(\"coco.txt\", \"r\")\ndata = my_file.read()\nclass_list = data.split(\"\\n\")\n# print(class_list)\ncount = 0\ntracker = Tracker()\ncy1 = 322\ncy2 = 368\noffset = 6\nvh_down = {}",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "data = my_file.read()\nclass_list = data.split(\"\\n\")\n# print(class_list)\ncount = 0\ntracker = Tracker()\ncy1 = 322\ncy2 = 368\noffset = 6\nvh_down = {}\ncounter = []",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "class_list",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "class_list = data.split(\"\\n\")\n# print(class_list)\ncount = 0\ntracker = Tracker()\ncy1 = 322\ncy2 = 368\noffset = 6\nvh_down = {}\ncounter = []\nvh_up = {}",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "count",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "count = 0\ntracker = Tracker()\ncy1 = 322\ncy2 = 368\noffset = 6\nvh_down = {}\ncounter = []\nvh_up = {}\ncounter1 = []\nwhile True:",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "tracker",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "tracker = Tracker()\ncy1 = 322\ncy2 = 368\noffset = 6\nvh_down = {}\ncounter = []\nvh_up = {}\ncounter1 = []\nwhile True:\n    ret, frame = cap.read()",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "cy1",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "cy1 = 322\ncy2 = 368\noffset = 6\nvh_down = {}\ncounter = []\nvh_up = {}\ncounter1 = []\nwhile True:\n    ret, frame = cap.read()\n    if not ret:",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "cy2",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "cy2 = 368\noffset = 6\nvh_down = {}\ncounter = []\nvh_up = {}\ncounter1 = []\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "offset",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "offset = 6\nvh_down = {}\ncounter = []\nvh_up = {}\ncounter1 = []\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break\n    count += 1",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "vh_down",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "vh_down = {}\ncounter = []\nvh_up = {}\ncounter1 = []\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break\n    count += 1\n    if count % 3 != 0:",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "counter",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "counter = []\nvh_up = {}\ncounter1 = []\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break\n    count += 1\n    if count % 3 != 0:\n        continue",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "vh_up",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "vh_up = {}\ncounter1 = []\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break\n    count += 1\n    if count % 3 != 0:\n        continue\n    frame = cv2.resize(frame, (1020, 500))",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "counter1",
+        "kind": 5,
+        "importPath": "speed",
+        "description": "speed",
+        "peekOfCode": "counter1 = []\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break\n    count += 1\n    if count % 3 != 0:\n        continue\n    frame = cv2.resize(frame, (1020, 500))\n    results = model.predict(frame)",
+        "detail": "speed",
+        "documentation": {}
+    },
+    {
+        "label": "process_video_thread",
+        "kind": 2,
+        "importPath": "Track",
+        "description": "Track",
+        "peekOfCode": "def process_video_thread(file_path, output_file):\n    process_video(file_path, output_file)\ndef count_and_list_contents(path):\n    print(\"path is called\")\n    threads = []\n    try:\n        for root, dirs, files in os.walk(path):\n            for dir in dirs:\n                print(f\"Dir: {os.path.join(root, dir)}\")\n            i = 0",
+        "detail": "Track",
+        "documentation": {}
+    },
+    {
+        "label": "count_and_list_contents",
+        "kind": 2,
+        "importPath": "Track",
+        "description": "Track",
+        "peekOfCode": "def count_and_list_contents(path):\n    print(\"path is called\")\n    threads = []\n    try:\n        for root, dirs, files in os.walk(path):\n            for dir in dirs:\n                print(f\"Dir: {os.path.join(root, dir)}\")\n            i = 0\n            for file in files:\n                if i >= len(output_files):",
+        "detail": "Track",
+        "documentation": {}
+    },
+    {
+        "label": "output_files",
+        "kind": 5,
+        "importPath": "Track",
+        "description": "Track",
+        "peekOfCode": "output_files = [\n    os.path.join('TrafficLogs', 'car_count_data1.txt'),\n    os.path.join('TrafficLogs', 'car_count_data2.txt'),\n    os.path.join('TrafficLogs', 'car_count_data3.txt'),\n    os.path.join('TrafficLogs', 'car_count_data4.txt')\n]\ndef process_video_thread(file_path, output_file):\n    process_video(file_path, output_file)\ndef count_and_list_contents(path):\n    print(\"path is called\")",
+        "detail": "Track",
+        "documentation": {}
+    },
+    {
+        "label": "Tracker",
+        "kind": 6,
+        "importPath": "tracker",
+        "description": "tracker",
+        "peekOfCode": "class Tracker:\n    def __init__(self):\n        # Store the center positions of the objects\n        self.center_points = {}\n        # Keep the count of the IDs\n        # each time a new object id detected, the count will increase by one\n        self.id_count = 0\n    def update(self, objects_rect):\n        # Objects boxes and ids\n        objects_bbs_ids = []",
+        "detail": "tracker",
+        "documentation": {}
+    }
+]
